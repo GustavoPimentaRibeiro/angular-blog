@@ -1,0 +1,15 @@
+.container__menu-bar {
+  
+}
+
+.container__menu-bar > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+
+  text-decoration: none;
+}
+
+.container__menu-bar > ul > li {
+  list-style: none;
+}

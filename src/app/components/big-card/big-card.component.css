@@ -1,5 +1,5 @@
 .container__big-card {
-  width: 50%;
+  width: 500px;
   height: 100%;
 
   display: flex;
@@ -11,8 +11,7 @@
 }
 
 .big-card__photo > img {
-  width: 100%;
-  min-width: 50%;
+  width: 500px;
 }
 
 .big-card__title > h1 {
