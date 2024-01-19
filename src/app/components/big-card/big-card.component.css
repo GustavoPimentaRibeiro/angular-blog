@@ -21,5 +21,7 @@
 
 .big-card__description > p > a {
   font-size: 12pt;
+  text-align: justify;
+
   color: #888888;
 }

@@ -1,0 +1,7 @@
+@media screen and (max-width: 1200px) {
+  .content__description > p {
+    width: 80%;
+
+    margin: 0 auto;
+  }
+}

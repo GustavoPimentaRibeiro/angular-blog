@@ -1,22 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { dataFake } from '../../data/dataFake';
 
 @Component({
   selector: 'app-content',
   standalone: true,
   imports: [RouterModule],
   templateUrl: './content.component.html',
-  styleUrl: './content.component.css',
+  styleUrls: ['./content.component.css', './content.responsive.component.css'],
 })
 export class ContentComponent implements OnInit {
-  photoCover: string =
-    'https://lumiere-a.akamaihd.net/v1/images/iron_man_marvel_d9ce0209.jpeg?region=36,0,713,399';
-  contentTitle: string = 'MINHA NOTÍCIA';
-  contentDescription: string = 'olá mundo!';
+  private id: string | null = '0';
+  photoCover: string = '';
+  contentTitle: string = '';
+  contentDescription: string = '';
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe((value) => console.log(value.get('id')));
+    this.route.paramMap.subscribe((value) => (this.id = value.get('id')));
+
+    this.setValuesToComponent(this.id);
+  }
+
+  setValuesToComponent(id: string | null) {
+    const result: any = dataFake.filter((article) => article.id == id)[0];
+
+    if (result) {
+      this.contentTitle = result.title;
+      this.contentDescription = result.description;
+      this.photoCover = result.photo;
+    }
   }
 }

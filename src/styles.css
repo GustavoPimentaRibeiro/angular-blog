@@ -29,3 +29,7 @@ a:active {
   text-decoration: none;
   color: #ffffff;
 }
+
+.container__app-root {
+  width: 100%;
+}

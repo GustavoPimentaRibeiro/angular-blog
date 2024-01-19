@@ -7,8 +7,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  border: 1px solid white;
 }
 
 .content__cover > img {
@@ -25,5 +23,8 @@
 }
 
 .content__description > p {
+  margin-top: 20px;
+  text-align: justify;
+
   color: #aaaaaa;
 }
